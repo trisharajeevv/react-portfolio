@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  color: #1f2937;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8%;
+  background: #111827;
+  color: rgb(102, 64, 190);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: rgb(37, 95, 161);
+  text-decoration: none;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: rgb(33, 27, 152);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 10%;
+  background: #88b5eb;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 5px 0;
+}
+
+.hero h2 {
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-weight: 700;
+}
+
+.btn {
+  margin-top: 15px;
+  display: inline-block;
+  background: #a484d6;
+  color: rgb(58, 45, 73);
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.section {
+  padding: 65px 10%;
+}
+
+.section h2 {
+  font-size: 2rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  background: rgb(150, 152, 209);
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: rgb(185, 166, 194);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+}
+
+.project-image {
+  font-size: 3rem;
+}
+
+.project-card a {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111827;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    flex-direction: column;
+    background: #111827;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
